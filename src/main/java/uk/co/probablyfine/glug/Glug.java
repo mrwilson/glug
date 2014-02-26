@@ -1,4 +1,4 @@
-package uk.co.probablyfine;
+package uk.co.probablyfine.glug;
 
 import org.apache.commons.io.filefilter.DirectoryFileFilter;
 import org.apache.commons.io.filefilter.RegexFileFilter;

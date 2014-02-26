@@ -1,8 +1,8 @@
 package uk.co.probablyfine.glug.examples;
 
-import static uk.co.probablyfine.Glug.src;
-import static uk.co.probablyfine.GlugFunctions.dest;
-import static uk.co.probablyfine.GlugFunctions.print;
+import static uk.co.probablyfine.glug.Glug.src;
+import static uk.co.probablyfine.glug.functions.Destination.dest;
+import static uk.co.probablyfine.glug.functions.GlugFunctions.print;
 
 public class CopyFiles {
 

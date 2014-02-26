@@ -1,4 +1,4 @@
-package uk.co.probablyfine;
+package uk.co.probablyfine.glug;
 
 import java.io.File;
 import java.io.IOException;
