@@ -1,0 +1,3 @@
+glug.src(".*.java")
+  .pipe(f.print())
+  .run();
