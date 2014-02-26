@@ -9,6 +9,8 @@ public class CopyFiles {
     public static void main(String[] args) {
         src(".*.java")
             .pipe(print())
-            .pipe(dest("./copy_files_example"));
+            .pipe(dest("./copy_files_example"))
+            .run()
+        ;
     }
 }
