@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static org.apache.commons.io.FileUtils.listFiles;
+import static uk.co.probablyfine.glug.GlugState.addTask;
+import static uk.co.probablyfine.glug.GlugState.runTask;
 
 public class Glug {
 
@@ -22,6 +24,14 @@ public class Glug {
 
     public static Glug src(String... sources) {
         return new Glug(sources);
+    }
+
+    public static void task(String taskName, Glug glugTask) {
+        addTask(taskName, glugTask);
+    }
+
+    public static void run(String taskName) {
+        runTask(taskName);
     }
 
     public void run() {

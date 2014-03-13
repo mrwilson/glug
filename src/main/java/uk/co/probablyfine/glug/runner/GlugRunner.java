@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
+import static org.apache.commons.io.FileUtils.readFileToString;
 
 public class GlugRunner {
 
@@ -26,9 +27,21 @@ public class GlugRunner {
       classesToLoad.put("d",    Destination.class.getName());
     }}
 
-    public static void main(String[] args) throws ScriptException, ClassNotFoundException, IOException {
+    private static void runGlugTasks(String glugFile, String taskName) throws IOException, ScriptException {
         loadGlugClasses();
-        engine.eval(FileUtils.readFileToString(new File(args[0])));
+        engine.eval(readFileToString(new File(glugFile)));
+        engine.eval(format("glug.run(\"%s\")", taskName));
+    }
+
+    public static void main(String[] args) throws ScriptException, ClassNotFoundException, IOException {
+        switch (args.length) {
+            case 0:
+                runGlugTasks("Glugfile", "default");
+            case 1:
+                runGlugTasks("Glugfile", args[0]);
+            default:
+                runGlugTasks(args[0], args[1]);
+        }
     }
 
     private static void loadGlugClasses() {

@@ -1,3 +1,2 @@
-glug.src(".*.java")
-  .pipe(f.print())
-  .run();
+glug.task("default", glug.src(".*.java").pipe(f.print()));
+glug.task("xml",     glug.src(".*.xml").pipe(f.print()));
