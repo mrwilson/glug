@@ -1,6 +1,5 @@
 package uk.co.probablyfine.glug.runner;
 
-import org.apache.commons.io.FileUtils;
 import uk.co.probablyfine.glug.Glug;
 import uk.co.probablyfine.glug.functions.Destination;
 import uk.co.probablyfine.glug.functions.GlugFunctions;
